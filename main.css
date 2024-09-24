@@ -764,9 +764,14 @@ hr {
     }
 
     #bottom-text2 {
+        width: 80%;
         font-size: 0.75rem;
         padding: 10%;
         text-align: center;
+        display: grid;
+        grid-template-areas:
+            "charity charity charity"
+            "privacy bar serv";
     }
 
     #bottom-text2 span {
@@ -783,5 +788,21 @@ hr {
 
     #bottom-text2 img {
         vertical-align: middle;
+    }
+
+    #charity {
+        grid-area: charity;
+    }
+
+    #privacy {
+        grid-area: privacy;
+    }
+
+    #bar {
+        grid-area: bar;
+    }
+
+    #serv {
+        grid-area: serv;
     }
 }
