@@ -24,7 +24,8 @@
 #part4,
 #part5,
 #part6,
-#part7 {
+#part7,
+#part8 {
     width: 100%;
     margin-bottom: 10vh;
 }
@@ -106,6 +107,8 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 30px;
     height: 100%;
+    box-shadow: 0 0 10px 1px lightgreen;
+    padding: 5%;
 }
 
 .gallery picture img {
@@ -217,13 +220,17 @@ figure:hover {
 }
 
 /* part7 */
+#part7 {
+    padding: 5%;
+}
+
 #part7 h2 {
     text-align: center;
 }
 
 .accordion {
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 100%;
+    margin: 5% auto;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -246,8 +253,8 @@ figure:hover {
 .accordion-label {
     background-color: #f1f1f1;
     cursor: pointer;
-    padding: 15px;
-    font-size: 16px;
+    padding: 7%;
+    line-height: 140%;
     font-weight: bold;
     display: block;
     text-align: left;
@@ -261,7 +268,7 @@ figure:hover {
 /* Style for the hidden content (answer) */
 .accordion-content {
     display: none;
-    padding: 15px;
+    padding: 7%;
     background-color: #fff;
 }
 
@@ -271,27 +278,30 @@ figure:hover {
 }
 
 /* part8 */
-/* #part8 {
+#part8 {
     background-image: url("./imgs/dog-animated2.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-bottom: 10vh;
     width: 100%;
     height: 70vh;
     color: white;
-} */
+}
 
-/* 
 #part8 p {
-    font-size: 50px;
+    font-size: 3.5rem;
     padding-top: 22vh;
     padding-bottom: 7vh;
 }
 
 #part8 div a {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: white;
     border: 2px solid white;
     border-radius: 30px;
@@ -301,7 +311,29 @@ figure:hover {
 #part8 div a:hover {
     background-color: white;
     color: #5F249F;
-} */
+}
+
+/* part9 */
+#part9 p span {
+    position: relative;
+}
+
+#part9 p span::after {
+    content: url(./imgs/home-star.png);
+    position: absolute;
+    top: -50%;
+    left: 20%;
+}
+
+/* footer */
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: gainsboro;
+    border: 0;
+    margin-top: 50px;
+}
+
 
 
 
@@ -528,4 +560,228 @@ figure:hover {
         margin-bottom: 5vh;
     }
 
+    /* part7 */
+    #part7 {
+        font-size: 1.5rem;
+    }
+
+    .accordion-label {
+        font-size: 1rem;
+    }
+
+    .accordion-content {
+        font-size: 1rem;
+    }
+
+    /* part8 */
+    #part8 {
+        height: 30vh;
+        padding: 10% 0;
+    }
+
+    #part8 p {
+        font-size: 2rem;
+        padding: 0 0 5% 0;
+    }
+
+    #part8 div a {
+        font-size: 1rem;
+        color: white;
+        border: 2px solid white;
+        border-radius: 30px;
+        padding: 10px 30px;
+    }
+
+    #part8 div a:hover {
+        background-color: white;
+        color: #5F249F;
+    }
+
+    /* part9 */
+    #part9 {
+        width: 100%;
+        margin-bottom: 5vh;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.7fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding: 5%;
+    }
+
+    #part9 p {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        margin-bottom: 5%;
+    }
+
+    #part9 p span {
+        color: #5D239B;
+    }
+
+    #part9 div {
+        display: inline-block;
+    }
+
+    #form {
+        width: 100%;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        box-shadow: 0 0 5px 0 #31095c;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        padding: 15% 5% 10% 5%;
+        background-color: #F5EFFB;
+        border-radius: 10px;
+    }
+
+    #name-field,
+    #email-field,
+    #select-field {
+        margin-bottom: 5%;
+    }
+
+    #name-field input {
+        background-color: white;
+        border: 1px solid #31095c;
+        border-radius: 5px;
+        padding: 3% 5%;
+        width: 100%;
+    }
+
+    #name-input::placeholder {
+        color: #5F249F;
+        font-size: 0.875rem;
+        opacity: 1;
+    }
+
+    #email-field input {
+        background-color: white;
+        border: 1px solid #31095c;
+        border-radius: 5px;
+        padding: 3% 5%;
+        width: 100%;
+    }
+
+    #email-input::placeholder {
+        color: #5F249F;
+        font-size: 0.875rem;
+        opacity: 1;
+    }
+
+    .select-area {
+        background-color: white;
+        color: #5F249F;
+        border: 1px solid #31095c;
+        border-radius: 5px;
+        padding: 3% 5%;
+        font-size: 0.875rem;
+        width: 100%;
+    }
+
+    #part9 button {
+        background-color: white;
+        color: #5F249F;
+        margin: 10% auto;
+        margin-bottom: 5%;
+        padding: 3% 50px;
+        border: 1px solid #5F249F;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    #part9 button:hover {
+        background-color: #5F249F;
+        color: white;
+    }
+
+    #icon-zips {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+
+    #icon-zips img:hover {
+        opacity: 0.7;
+    }
+
+    /* footer */
+    footer {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-top: 5px solid #4F1E84;
+        padding-top: 5vh;
+    }
+
+    #logo2 {
+        margin-bottom: 10%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.875rem;
+    }
+
+    .footer-container div span {
+        display: block;
+        padding: 5%;
+    }
+
+    .footer-container div span a {
+        color: #5c5c5c;
+    }
+
+    .footer-container div span a:hover {
+        color: #885db6;
+    }
+
+    .color-text {
+        color: #8E62BE;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 10%;
+    }
+
+    #bottom-text1 {
+        font-size: 0.875rem;
+    }
+
+    #bottom-text1 p {
+        padding: 7%;
+        line-height: 150%;
+        width: 100%;
+        text-align: left;
+    }
+
+    #bottom-text2 {
+        font-size: 0.75rem;
+        padding: 10%;
+        text-align: center;
+    }
+
+    #bottom-text2 span {
+        line-height: 150%;
+    }
+
+    #bottom-text2 a {
+        color: black;
+    }
+
+    #bottom-text2 a:hover {
+        color: #8E62BE;
+    }
+
+    #bottom-text2 img {
+        vertical-align: middle;
+    }
 }
