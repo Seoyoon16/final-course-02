@@ -7,6 +7,10 @@
     border: none;
 }
 
+:root {
+    --main-bg-color: #5F249F;
+}
+
 /* index.html */
 .font-baloo {
     font-family: 'Baloo 2', cursive;
@@ -32,7 +36,7 @@
 
 .main-container {
     width: 100%;
-    background-color: #5F249F;
+    background-color: var(--main-bg-color);
     color: white;
     padding: 10% 5%;
 }
@@ -279,10 +283,6 @@ figure:hover {
 
 /* part8 */
 #part8 {
-    background-image: url("./imgs/dog-animated2.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -292,6 +292,17 @@ figure:hover {
     width: 100%;
     height: 70vh;
     color: white;
+    position: relative;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 #part8 p {
@@ -333,7 +344,6 @@ hr {
     border: 0;
     margin-top: 50px;
 }
-
 
 
 
@@ -421,7 +431,7 @@ hr {
     #btn-donate {
         padding: 20% 25%;
         border-radius: 50px;
-        background-color: #5D239B;
+        background-color: var(--main-bg-color);
         color: white;
         font-size: 0.875rem;
     }
@@ -591,7 +601,7 @@ hr {
         color: white;
         border: 2px solid white;
         border-radius: 30px;
-        padding: 10px 30px;
+        padding: 5px 20px;
     }
 
     #part8 div a:hover {
