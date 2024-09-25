@@ -1,6 +1,8 @@
 /* Tablets */
-@media (min-width: 600px) and (max-width: 1023.999px) {
-    #top-nav-mobile {
+@media (min-width: 600px) and (max-width: 1023.9px) {
+
+    #top-nav-mobile,
+    #goToTopBtn {
         display: none;
     }
 
@@ -460,7 +462,6 @@
     #top-nav {
         background-color: #FAFAFA;
         width: 100%;
-        height: 40px;
         text-align: center;
         padding: 10px 0;
     }
@@ -472,7 +473,7 @@
 
     #top-nav div a {
         color: #636563;
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     #top-nav div a:hover {
@@ -482,6 +483,24 @@
     .text-overline {
         height: 12px;
         opacity: 0.5;
+    }
+
+    /* Go-to-top Btn */
+    #goToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 9999;
+        opacity: 0.5;
+    }
+
+    #goToTopBtn img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #goToTopBtn:hover {
+        opacity: 1;
     }
 
     /* header */
@@ -597,20 +616,18 @@
         justify-content: center;
         align-items: center;
         align-self: auto;
-        padding: 0 20px;
+        padding: 3vh 2vw;
         text-align: center;
-        margin-bottom: 70px;
     }
 
     #part1 h1 {
-        font-size: 60px;
-        padding: 10px;
-        margin: 20px;
-        margin-bottom: 20px;
+        font-size: 3.5rem;
+        line-height: 130%;
+        margin-bottom: 1.5rem;
     }
 
     #part1 p {
-        font-size: 24px;
+        font-size: 1.4rem;
     }
 
     #part1 img {
@@ -627,14 +644,15 @@
     }
 
     #part2 span {
-        font-size: 20px;
+        font-size: 1.4rem;
     }
 
     #part2 p {
-        font-size: 54px;
-        padding: 10px;
-        margin: 20px auto;
-        width: 70%;
+        font-size: 3.2rem;
+        line-height: 140%;
+        padding: 3vh 3vw;
+        margin: auto;
+        width: 90%;
     }
 
     /* part3 */
@@ -648,129 +666,29 @@
         border-radius: 30px;
     }
 
-    /* part3 */
-    #adopt-part3 {
-        text-align: center;
-        padding: 40px 0;
-    }
-
-    #adopt-part3 p {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    #adopt-part3 h1 {
-        font-size: 50px;
-        margin-bottom: 30px;
-        font-weight: normal;
-        width: 45%;
-        margin: 15px auto;
-    }
-
-    #tilt {
-        font-size: 54px;
-        font-style: italic;
-    }
-
-    #adopt-part3 .slider {
-        display: flex;
-        overflow-x: auto;
-        overflow-y: hidden;
-        justify-content: center;
-        gap: 20px;
-        width: 80%;
-        height: 20vw;
-        margin: 70px auto;
-        padding-left: 20vw;
-        position: relative;
-    }
-
-    #adopt-part3 .slider div {
-        min-width: 200px;
-        max-width: 200px;
-        border-radius: 10px;
-        background-color: #f8f8f8;
-        padding: 15px;
-        text-align: center;
-        flex-shrink: 0;
-    }
-
-    #adopt-part3 .slider div:hover {
-        transform: scale(1.1);
-        overflow: hidden;
-    }
-
-    #adopt-part3 .slider div img {
-        border-radius: 10px;
-        width: 100%;
-        height: 66%;
-        margin-bottom: 15px;
-    }
-
-    #adopt-part3 .slider div span {
-        display: block;
-        font-size: 16px;
-        color: #333;
-        margin-top: 5px;
-    }
-
-    #adopt-part3 .slider div span:first-of-type {
-        color: #022668;
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    #adopt-part3 .slider div span:last-of-type {
-        color: #F8ABD1;
-        font-size: 14px;
-    }
-
-    #adopt-part3 .slider-controls {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-    }
-
-    #adopt-part3 .slider-controls button {
-        background-color: rgba(0, 0, 0, 0.5);
-        border: none;
-        color: white;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 50%;
-    }
-
-    #adopt-part3 .slider-controls button:disabled {
-        opacity: 0.5;
-        cursor: default;
-    }
-
     /* part4 */
     #part4 {
         text-align: center;
         padding-top: 15vh;
         margin-bottom: 10vh;
         background-color: #F5EFFB;
-        height: 90vh;
+        position: relative;
     }
 
     #part4 span {
-        font-size: 20px;
+        font-size: 1.4rem;
     }
 
-    #part4 p {
-        font-size: 44px;
-        padding: 10px;
-        margin-top: 10px;
+    .part4-message {
+        font-size: 3.5rem;
+        font-weight: 600;
+        padding: 2%;
     }
 
     #part4-inner-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 100px);
+        grid-template-rows: repeat(2, 0.4fr);
         grid-template-areas:
             "i141 i142 i143 i144"
             "t141 t142 t143 t144";
@@ -779,13 +697,18 @@
         align-items: center;
         /* ver */
         color: #5D239B;
-        margin: 70px 30px 100px 30px;
+        gap: 2vw;
 
     }
 
+    #part4-inner-container h3 {
+        font-size: 1.5rem;
+    }
+
     #part4-inner-container p {
-        font-size: 19px;
+        font-size: 1.2rem;
         color: black;
+        margin-top: 3%;
     }
 
     #img-1-4-1 {
@@ -822,218 +745,236 @@
 
     #arrow {
         color: #5D239B;
-        font-size: 50px;
+        font-size: 4rem;
+        position: absolute;
+        bottom: -4%;
+        left: 49%;
     }
 
     /* part5 */
-    #part5 {
-        margin-bottom: 15vh;
-        width: 100%;
+    #part5 p {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #31095c;
         text-align: center;
-        padding: 50px 20px;
-    }
-
-    #sol {
-        font-size: 20px;
+        margin-bottom: 2vh;
     }
 
     #part5 h1 {
-        font-size: 50px;
-        font-weight: 300;
-        margin: 0 auto;
-        margin-top: 10px;
-        margin-bottom: 70px;
-        width: 480px;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #31095c;
+        text-align: center;
+        line-height: 140%;
+        margin-bottom: 10vh;
     }
 
-    #part5 h1 span {
-        color: #6d1b7b;
-        font-weight: bold;
+    .gallery {
+        width: 80%;
+        margin: auto;
     }
 
-    #part5 div[id^="to-"] {
+    /* part6 */
+    #part6 {
+        padding: 7% 5% 25% 5%;
+        background-color: #F5EFFB;
+    }
+
+    #part6 #sol {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #31095c;
+        text-align: center;
+    }
+
+    #part6 h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #31095c;
+        text-align: center;
+        line-height: 140%;
+        margin-top: 1%;
+        margin-bottom: 10vh;
+    }
+
+    .slideshow {
+        height: 80vh;
+    }
+
+    .slide img {
+        max-height: 70vh;
+        margin-bottom: 5%;
+    }
+
+    .slide span {
+        font-size: 1.4rem;
+        line-height: 150%;
         display: inline-block;
-        width: 400px;
-        margin: 0 10px;
-        text-align: left;
     }
 
-    #part5 a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    #part5 img {
-        width: 380px;
-        height: 420px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    #part5 img:hover {
-        transform: scale(1.1);
-    }
-
-    #part5 h2 {
-        font-size: 40px;
-        color: navy;
-        margin: 10px 0 40px 0;
-    }
-
-    #part5 div[id^="to-"] span {
-        line-height: 1.5;
-        font-size: 17px;
-    }
-
-    #part5 div[id^="to-"] span:last-of-type {
-        display: block;
-        margin-top: 30px;
-        color: navy;
-        border-bottom: 4px solid #8E62BE;
-        font-weight: bold;
-        width: 170px;
-    }
-
-    #part5 div[id^="to-"] span:last-of-type:hover {
-        color: #8E62BE;
-    }
-
-    /* part 6 */
-    #accordion-part {
-        margin: 10vh 0;
-    }
-
-    .accordion {
-        max-width: 600px;
-        margin: 20px auto;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    /* Style for the question headers */
-    .accordion-item {
-        border-bottom: 1px solid #ccc;
-    }
-
-    .accordion-item:last-child {
-        border-bottom: none;
-    }
-
-    /* Hide radio buttons */
-    .accordion-header {
-        display: none;
-    }
-
-    /* Style for the label acting as the question */
-    .accordion-label {
-        background-color: #f1f1f1;
-        cursor: pointer;
-        padding: 15px;
-        font-size: 16px;
-        font-weight: bold;
-        display: block;
-        text-align: left;
-        transition: background-color 0.3s ease;
-    }
-
-    .accordion-label:hover {
-        background-color: #ddd;
-    }
-
-    /* Style for the hidden content (answer) */
-    .accordion-content {
-        display: none;
-        padding: 15px;
-        background-color: #fff;
-    }
-
-    /* Show content when the corresponding header is checked */
-    .accordion-header:checked+.accordion-label+.accordion-content {
-        display: block;
+    .slide h2 {
+        font-size: 2rem;
+        margin: 2% 0;
     }
 
     /* part7 */
-    #part6 {
-        background-image: url("./imgs/dog-animated2.gif");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        text-align: center;
-        margin-bottom: 10vh;
-        width: 100%;
-        height: 70vh;
-        color: white;
+    #part7 {
+        font-size: 3rem;
     }
 
-    #part6 p {
-        font-size: 50px;
-        padding-top: 22vh;
-        padding-bottom: 7vh;
+    .accordion-label {
+        font-size: 1.1rem;
+        padding: 3% 7%;
     }
 
-    #part6 div a {
-        font-size: 20px;
+    .accordion-content {
+        font-size: 1rem;
+        padding: 3% 7%;
+    }
+
+    /* part8 */
+    #part8 {
+        height: 80vh;
+        padding: 10% 0;
+    }
+
+    #part8 p {
+        font-size: 3.5rem;
+        padding: 0 0 5% 0;
+    }
+
+    #part8 div a {
+        font-size: 1.4rem;
         color: white;
         border: 2px solid white;
         border-radius: 30px;
-        padding: 12px 33px;
+        padding: 10px 30px;
     }
 
-    #part6 div a:hover {
+    #part8 div a:hover {
         background-color: white;
         color: #5F249F;
     }
 
-    /* part8 */
-    #part7 {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    /* part9 */
+    #part9 {
         width: 100%;
-        height: 30vh;
+        margin-bottom: 5vh;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 0.3fr 1fr;
         justify-items: center;
         align-items: center;
+        padding: 5%;
     }
 
-    #part7 p {
-        font-size: 28px;
-        justify-self: start;
-        margin-left: 5vw;
+    #part9 p {
+        font-size: 4rem;
+        font-weight: 600;
+        text-align: center;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        margin-bottom: 5%;
     }
 
-    #part7 p span {
+    #part9 p span {
         color: #5D239B;
     }
 
-    #email-field {
+    #part9 div {
+        display: inline-block;
+    }
+
+    #form {
+        width: 80%;
+        margin: auto;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        box-shadow: 0 0 5px 0 #31095c;
+        margin-bottom: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 0.5fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        padding: 5%;
         background-color: #F5EFFB;
-        padding: 10px;
-        margin-left: 14vw;
+        border-radius: 10px;
+    }
+
+    #name-field,
+    #email-field,
+    #select-field {
+        margin-bottom: 5%;
+    }
+
+    #name-field input {
+        background-color: white;
+        border: 1px solid #31095c;
+        border-radius: 5px;
+        padding: 6%;
+        width: 100%;
+    }
+
+    #name-input::placeholder {
+        color: #5F249F;
+        font-size: 0.875rem;
+        opacity: 1;
     }
 
     #email-field input {
-        background-color: #F5EFFB;
-        color: #5F249F;
-        width: 36vw;
-        padding: 15px 10px;
-        justify-self: end;
+        background-color: white;
+        border: 1px solid #31095c;
+        border-radius: 5px;
+        padding: 6%;
+        width: 100%;
     }
 
     #email-input::placeholder {
         color: #5F249F;
-        font-size: 16px;
+        font-size: 0.875rem;
         opacity: 1;
     }
 
-    #part7 div {
-        grid-row: 2 / 3;
+    #select-field {
+        grid-column: 1 / 3;
+    }
+
+    .select-area {
+        background-color: white;
+        color: #5F249F;
+        border: 1px solid #31095c;
+        border-radius: 5px;
+        padding: 3%;
+        font-size: 0.875rem;
+        width: 100%;
+    }
+
+    #part9 button {
+        background-color: white;
+        color: #5F249F;
+        width: 50%;
+        margin: 0 0 0 50%;
+        padding: 4% 50px;
+        border: 1px solid #5F249F;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        grid-row: 3 / 4;
         grid-column: 2 / 3;
-        display: inline-block;
+    }
+
+    #part9 button:hover {
+        background-color: #5F249F;
+        color: white;
     }
 
     #icon-zips {
-        margin-right: 14vw;
-        margin-bottom: 7vh;
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        justify-self: right;
     }
 
     #icon-zips img:hover {
@@ -1074,7 +1015,8 @@
 
     .color-text {
         color: #8E62BE;
-        font-size: 14px;
+        font-size: 1.1rem;
+        font-weight: 600;
     }
 
     hr {
@@ -1088,7 +1030,7 @@
     }
 
     #bottom-text1 {
-        font-size: 13px;
+        font-size: 0.875rem;
         grid-column: 1 / 3;
     }
 
@@ -1099,14 +1041,14 @@
     }
 
     #bottom-text2 {
-        font-size: 13px;
+        font-size: 0.75rem;
         grid-column: 3 / 4;
         padding-top: 25px;
         text-align: right;
     }
 
     #bottom-text2 span {
-        line-height: 1.5;
+        line-height: 150%;
         padding: 0 5px;
     }
 
