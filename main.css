@@ -338,8 +338,10 @@ hr {
 
 
 /* Mobile devices */
-@media (max-width: 599.999px) {
-    #top-nav {
+@media (max-width: 599.9px) {
+
+    #top-nav,
+    #goToTopBtn {
         display: none;
     }
 
